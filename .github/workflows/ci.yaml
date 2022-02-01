@@ -6,16 +6,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
     steps:
       - uses: actions/checkout@v2
       
-      - name: Setup all Python version
+      - name: Setup Python version
         uses: actions/setup-python@v2
         with:
-          python-version: $ {{ matrix.python-version }}
+          python-version: 3.6
           architecture: x64
       
       - name: Compile Python files
@@ -31,6 +28,9 @@ jobs:
         with:
           python-version: 3.6
           architecture: x64
+          
+      - name: Install pytest
+        run: python3 -m pip install pytest
 
       - name: Run unit tests
         run: python3 -m pytest -s
