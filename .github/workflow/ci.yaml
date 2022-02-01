@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup all Python version
+        uses: actions/setup-python@v2
+        with:
+          python-version: $ {{ matrix.python-version }}
+          architecture: x64
+      
+      - name: Compile Python files
+        run: python3 -m compileall .
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+          architecture: x64
+
+      - name: Run unit tests
+        run: python3 -m pytest -s
