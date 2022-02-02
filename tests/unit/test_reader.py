@@ -15,3 +15,7 @@ class TestReader:
         assert self.reader.fetch_one(2294) == 'mercy'
         assert self.reader.fetch_one(1392) == 'snort'
         assert self.reader.fetch_one(289) == 'lowly'
+
+    def test_contain(self):
+        assert self.reader.contain('aaaaa') == False
+        assert self.reader.contain('print') == True
