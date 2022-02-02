@@ -17,5 +17,5 @@ class TestReader:
         assert self.reader.fetch_one(289) == 'lowly'
 
     def test_contain(self):
-        assert self.reader.contain('aaaaa') == False
-        assert self.reader.contain('print') == True
+        assert self.reader.contain('aaaaa') is False
+        assert self.reader.contain('print') is True
