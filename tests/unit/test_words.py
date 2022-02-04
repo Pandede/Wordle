@@ -8,7 +8,9 @@ class TestWordAgent:
     wa.solution = 'yeast'
 
     def test_inspect(self):
-        assert self.wa.inspect('aeiou') == [Color.YELLOW, Color.GREEN, Color.GRAY, Color.GRAY, Color.GRAY]
+        assert self.wa.inspect('aeiou') is None
         assert self.wa.inspect('yeast') == [Color.GREEN, Color.GREEN, Color.GREEN, Color.GREEN, Color.GREEN]
-        assert self.wa.inspect('yyyyy') == [Color.GREEN, Color.YELLOW, Color.YELLOW, Color.YELLOW, Color.YELLOW]
-        assert self.wa.inspect('tsaey') == [Color.YELLOW, Color.YELLOW, Color.GREEN, Color.YELLOW, Color.YELLOW]
+        assert self.wa.inspect('yyyyy') is None
+        assert self.wa.inspect('tsaey') is None
+        assert self.wa.inspect('envoy') == [Color.YELLOW, Color.GRAY, Color.GRAY, Color.GRAY, Color.YELLOW]
+        assert self.wa.inspect('yearn') == [Color.GREEN, Color.GREEN, Color.GREEN, Color.GRAY, Color.GRAY]

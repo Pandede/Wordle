@@ -10,6 +10,9 @@ class Reader:
         with open(filepath, 'r') as streamer:
             return streamer.read().splitlines()
 
+    def contain(self, word: str) -> bool:
+        return word in self.wordlist
+
     def fetch_all(self) -> List[str]:
         return self.wordlist
 

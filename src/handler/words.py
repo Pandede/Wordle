@@ -27,8 +27,13 @@ class WordAgent:
         return guess == self.solution
 
     def inspect(self, guess: str) -> List[Color]:
+        # Check if the length of guess word does not match
         if len(self.solution) != len(guess):
             raise ValueError(f'expected length of word {len(self.solution)}, got {len(guess)}')
+
+        # Check if the guess word does not in the dictionary
+        if not self.reader.contain(guess):
+            return None
 
         return [
             self.__get_color(guess_char, sol_char)
