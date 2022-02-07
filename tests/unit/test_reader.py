@@ -1,7 +1,8 @@
 from src.handler.reader import Reader
 
+
 WORDLIST_PATH = './data/wordlist.txt'
-NUM_WORDLIST = 2315
+NUM_WORDLIST = 12972
 
 
 class TestReader:
