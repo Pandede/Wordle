@@ -1,0 +1,43 @@
+[class^="icon-"], [class*=" icon-"] {
+    display: inline-block;
+    width: 100%;
+}
+.navbar {
+    padding: 6px;
+}
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 0;
+    font-size: 22px;
+}
+
+#game .game-row{
+    background: #000;
+    border-color: gray;
+    border-width: 3px;
+}
+
+#game .game-title{
+    border-color: gray;
+    border-width: 3px;
+}
+
+/* #game .containter{
+
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+
+} */
+#button.upper {
+    text-transform: uppercase;
+}
+#board-container, #keyboard {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
