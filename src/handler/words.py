@@ -18,16 +18,37 @@ class WordAgent:
         self.solution = self.choice()
 
     def choice(self) -> str:
+        """Return a random word from the dictionary
+
+        Returns:
+            str: word
+        """
         rnd_idx = random.randint(0, self.reader.n_words)
         return self.reader.fetch_one(rnd_idx)
 
-    def solution(self) -> str:
-        return self.solution
-
     def is_solution(self, guess: str) -> bool:
+        """Return True if the guess is identical to solution
+
+        Args:
+            guess (str): the guess word
+
+        Returns:
+            bool: is identical
+        """
         return guess == self.solution
 
     def inspect(self, guess: str) -> List[Color]:
+        """Compute the color tiles according to the guess
+
+        Args:
+            guess (str): the guess word
+
+        Raises:
+            ValueError: if the length of guess word does not match
+
+        Returns:
+            List[Color]: resulting color tiles
+        """
         # Check if the length of guess word does not match
         if len(self.solution) != len(guess):
             raise ValueError(f'expected length of word {len(self.solution)}, got {len(guess)}')
