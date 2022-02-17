@@ -1,4 +1,5 @@
 import random
+from collections import Counter
 from enum import Enum
 from typing import List
 
@@ -35,16 +36,21 @@ class WordAgent:
         if not self.reader.contain(guess):
             return None
 
-        return [
-            self.__get_color(guess_char, sol_char)
-            for guess_char, sol_char in zip(guess, self.solution)
-        ]
+        # Compute counting dictionary
+        counter = Counter(self.solution)
 
-    def __get_color(self, guess_char: str, sol_char: str) -> Color:
-        if guess_char == sol_char:
-            return Color.GREEN
+        result = []
+        for guess_char, sol_char in zip(guess, self.solution):
+            # Return GREEN if the character is identical and correct location
+            if guess_char == sol_char:
+                result.append(Color.GREEN)
+                counter[guess_char] -= 1
+            # Return YELLOW if the character is in the solution and has not been guessed yet
+            elif guess_char in self.solution and counter[guess_char] > 0:
+                result.append(Color.YELLOW)
+                counter[guess_char] -= 1
+            # Else, return GRAY
+            else:
+                result.append(Color.GRAY)
 
-        if guess_char in self.solution:
-            return Color.YELLOW
-
-        return Color.GRAY
+        return result
