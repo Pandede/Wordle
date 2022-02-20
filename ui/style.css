@@ -1,0 +1,50 @@
+.navbar {
+    padding: 6px;
+}
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 0;
+    font-size: 25px;
+}
+
+#game game-row{
+    height: 10vw;
+    flex-wrap: nowrap;
+}
+#game game-tile{
+  margin: 5px;
+  background-color: #fff;
+  border-color: gray;
+  border: 1px solid;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#keyboard button{
+    background-color: #d3d6da;
+    opacity: 0.5;
+    border-radius: 4px;
+    margin: 0 6 0 0;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+
+}
+#keyboard .row{
+    margin: 0 0 5 0;
+}
+#board-container, #keyboard {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
