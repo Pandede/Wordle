@@ -11,25 +11,28 @@
     font-size: 25px;
 }
 
-#game game-title{
+#game game-row{
+    height: 10vw;
+    flex-wrap: nowrap;
+}
+#game game-tile{
   margin: 5px;
   background-color: #fff;
   border-color: gray;
   border: 1px solid;
   display: inline-block;
-  height: 80px;
-  line-height: 80px;
+  line-height: 2rem;
   text-align: center;
   vertical-align: middle;
-  width: 80px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 #keyboard button{
     background-color: #d3d6da;
-    border-color: #0000;
-    border: 2px solid;
     opacity: 0.5;
     border-radius: 4px;
+    margin: 0 6 0 0;
     justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
@@ -37,7 +40,9 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0.3);
 
 }
-
+#keyboard .row{
+    margin: 0 0 5 0;
+}
 #board-container, #keyboard {
     margin-top: 80px;
     margin-bottom: 80px;
