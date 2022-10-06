@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <script src="https://kit.fontawesome.com/fffc3d07fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="phone">
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="title">Wordle</div>
+            </div>
+            <div class="settings">
+                <i class="fa-regular fa-circle-question"></i>
+                <i class="fa-sharp fa-solid fa-chart-simple"></i>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gameboard">
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+                <div class="gamerow">
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                    <div class="grid"></div>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class='keyboardrow'>
+                    <button data-key='q' value="Q">Q</button>
+                    <button data-key='w' value="W">W</button>
+                    <button data-key='e' value="E">E</button>
+                    <button data-key='r' value="R">R</button>
+                    <button data-key='t' value="T">T</button>
+                    <button data-key='y' value="Y">Y</button>
+                    <button data-key='u' value="U">U</button>
+                    <button data-key='i' value="I">I</button>
+                    <button data-key='o' value="O">O</button>
+                    <button data-key='p' value="P">P</button>
+                </div>
+
+                <div class='keyboardrow'>
+                    <button data-key='a' value="A">A</button>
+                    <button data-key='s' value="S">S</button>
+                    <button data-key='d' value="D">D</button>
+                    <button data-key='f' value="F">F</button>
+                    <button data-key='g' value="G">G</button>
+                    <button data-key='h' value="H">H</button>
+                    <button data-key='j' value="J">J</button>
+                    <button data-key='k' value="K">K</button>
+                    <button data-key='l' value="L">L</button>
+                </div>
+
+                <div class='keyboardrow'>
+                    <button id='enter' data-key='enter' type="submit" value="Enter">Enter</button>
+                    <button data-key='z' value="Z">Z</button>
+                    <button data-key='x' value="X">X</button>
+                    <button data-key='c' value="C">C</button>
+                    <button data-key='v' value="V">V</button>
+                    <button data-key='b' value="B">B</button>
+                    <button data-key='n' value="N">N</button>
+                    <button data-key='m' value="M">M</button>
+                    <button id='delete' data-key='delete'>
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
