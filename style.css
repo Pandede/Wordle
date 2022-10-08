@@ -159,6 +159,13 @@ table {
     border: 2px solid #d4d6da;
  }
 
+ .gameboard .gamerow .grid p {
+   font-size: 30px;
+   /* font-family: 'Ubuntu'; */
+   text-align: center;
+   top: 50%;
+}
+
  .keyboard{
     width: 484px;
     height: 193px;
@@ -169,7 +176,7 @@ table {
     align-items: center;
     /* should modify here */
     position: relative fixed;  
-	bottom: 0;
+	 bottom: 0;
     padding: 8px;  
  }
 
