@@ -157,13 +157,18 @@ table {
     margin-left: 2.5px;
     margin-right: 2.5px;
     border: 2px solid #d4d6da;
+    vertical-align: middle;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    
  }
 
  .gameboard .gamerow .grid p {
    font-size: 30px;
-   /* font-family: 'Ubuntu'; */
+   font-family: 'Ubuntu';
    text-align: center;
-   top: 50%;
+   text-transform: uppercase;
 }
 
  .keyboard{
