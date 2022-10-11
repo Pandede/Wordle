@@ -4,6 +4,12 @@ $(document).ready(function(){
     console.log(pointer[0], pointer[1]);
 
     // console.log(grid.getAttribute("row", "col"))
+    $('.keyboard').on('click', 'button', function(event) {
+        $(this).parent().parent().find('button').removeClass('activate');
+        $(this).addClass('activate');
+        
+    });
+
     $('.keyboard').on('click', '.btn', function(event) {
         if (pointer[1] >= 5) {
             alert("please press enter or delete!");
@@ -12,6 +18,7 @@ $(document).ready(function(){
             let letter = event.target.getAttribute("data-key");
             console.log(event.target.getAttribute("data-key"));
             $(`.gamerow[row=${pointer[0]}] .grid[col=${pointer[1]}]`).html('<p>' + letter+ '</p>'); 
+            $(`.gamerow[row=${pointer[0]}] .grid[col=${pointer[1]}]`).addClass('display'); 
             pointer[1]++;
         }
     });
@@ -22,7 +29,8 @@ $(document).ready(function(){
             pointer[1] = 0;
             pointer[0]++;
         } else {
-            alert("Invalid move!");
+            $(`.gamerow[row=${pointer[0]}]`).addClass('animate__animated animate__headShake');
+            // alert("Invalid move!");
         }
     });
 
@@ -31,6 +39,7 @@ $(document).ready(function(){
         if (pointer[1]<=5 & pointer[1]>=0){
             pointer[1]--;
             $(`.gamerow[row=${pointer[0]}] .grid[col=${pointer[1]}] p`).remove(); 
+            $(`.gamerow[row=${pointer[0]}] .grid[col=${pointer[1]}]`).removeClass('display'); 
             console.log(pointer[1]);
         } else {
             pointer[1] = 0;

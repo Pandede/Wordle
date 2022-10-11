@@ -161,7 +161,19 @@ table {
     display : flex;
     justify-content: center;
     align-items: center;
-    
+ }
+
+ .gameboard .gamerow .display{
+   width: 62px;
+    height: 62px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    border: 2px solid black;
+    vertical-align: middle;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
  }
 
  .gameboard .gamerow .grid p {
@@ -199,6 +211,17 @@ table {
     font-size: 13.33px;
     padding: 0px;
  }
+
+ .keyboard .keyboardrow button.activate{
+   width: 42px;
+   height: 58px;
+   margin-right: 2px;
+   border: 2px solid blue;
+   background: #d4d6da;
+   border-radius: 6px;
+   font-size: 13.33px;
+   padding: 0px;
+}
 
 #delete, #enter{
     width: 65px;
