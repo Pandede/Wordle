@@ -213,14 +213,7 @@ table {
  }
 
  .keyboard .keyboardrow button.activate{
-   width: 42px;
-   height: 58px;
-   margin-right: 2px;
    border: 2px solid blue;
-   background: #d4d6da;
-   border-radius: 6px;
-   font-size: 13.33px;
-   padding: 0px;
 }
 
 #delete, #enter{
@@ -231,3 +224,23 @@ table {
     background: #d4d6da;
     border-radius: 6px;
  }
+
+ /* game logic color */
+ .gameboard .gamerow .correct{
+   color: white;
+   background-color: #80a868;
+   border: 2px solid #80a868;
+   z-index: 500;
+}
+
+.gameboard .gamerow .halfcorrect{
+   color: white;
+   background-color: #c2b35f;
+   border: 2px solid #c2b35f;
+}
+
+.gameboard .gamerow .none{
+   color: white;
+   background-color: #797c7e;
+   border: 2px solid #797c7e;
+}
