@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fffc3d07fa.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css'/>
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="phone">
+                <div class="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="title">Wordle</div>
+            </div>
+            <div class="settings">
+                <i class="fa-regular fa-circle-question"></i>
+                <i class="fa-sharp fa-solid fa-chart-simple"></i>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="gameboard">
+                <div class="gamerow" row="0">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+                <div class="gamerow" row="1">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+                <div class="gamerow" row="2">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+                <div class="gamerow" row="3">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+                <div class="gamerow" row="4">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+                <div class="gamerow" row="5">
+                    <div class="grid" col="0"></div>
+                    <div class="grid" col="1"></div>
+                    <div class="grid" col="2"></div>
+                    <div class="grid" col="3"></div>
+                    <div class="grid" col="4"></div>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class='keyboardrow'>
+                    <button class="btn" data-key='q' value="Q">Q</button>
+                    <button class="btn" data-key='w' value="W">W</button>
+                    <button class="btn" data-key='e' value="E">E</button>
+                    <button class="btn" data-key='r' value="R">R</button>
+                    <button class="btn" data-key='t' value="T">T</button>
+                    <button class="btn" data-key='y' value="Y">Y</button>
+                    <button class="btn" data-key='u' value="U">U</button>
+                    <button class="btn" data-key='i' value="I">I</button>
+                    <button class="btn" data-key='o' value="O">O</button>
+                    <button class="btn" data-key='p' value="P">P</button>
+                </div>
+
+                <div class='keyboardrow'>
+                    <button class="btn" data-key='a' value="A">A</button>
+                    <button class="btn" data-key='s' value="S">S</button>
+                    <button class="btn" data-key='d' value="D">D</button>
+                    <button class="btn" data-key='f' value="F">F</button>
+                    <button class="btn" data-key='g' value="G">G</button>
+                    <button class="btn" data-key='h' value="H">H</button>
+                    <button class="btn" data-key='j' value="J">J</button>
+                    <button class="btn" data-key='k' value="K">K</button>
+                    <button class="btn" data-key='l' value="L">L</button>
+                </div>
+
+                <div class='keyboardrow'>
+                    <button id='enter' data-key='enter'value="Enter">Enter</button>
+                    <button class="btn" data-key='z' value="Z">Z</button>
+                    <button class="btn" data-key='x' value="X">X</button>
+                    <button class="btn" data-key='c' value="C">C</button>
+                    <button class="btn" data-key='v' value="V">V</button>
+                    <button class="btn" data-key='b' value="B">B</button>
+                    <button class="btn" data-key='n' value="N">N</button>
+                    <button class="btn" data-key='m' value="M">M</button>
+                    <button id='delete' data-key='delete'>
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <script src="all.js"></script>
+</body>
+</html>
